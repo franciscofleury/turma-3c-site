@@ -43,7 +43,10 @@ function agendaUpdate() {
             let entradas = Object.entries(doc.data())
             for (let i = 0; i < entradas.length;i++) {
                 let p = document.createElement('p')
-                let prazo = entradas[i][1].toDate().toDateString()
+                let data = new Date(entradas[i][1].toDate())
+                let newData = new Date()
+                newData.setDate(data.getDate()+1)
+                let prazo = newData.toDateString()
                 let pData = document.createElement('p')
                 p.innerText = entradas[i][0]
                 console.log(prazo)
