@@ -39,10 +39,13 @@ function getName(uid) {
 function agendaUpdate() {
     firebase.firestore().collection('AGENDA').doc('Agenda').onSnapshot(function(doc) {
         if (doc && doc.exists) {
+            agenda.innerHTML = ''
             let entradas = Object.entries(doc.data())
             for (let i = 0; i < entradas.length;i++) {
                 let p = document.createElement('p')
-                p.innerText = entradas[i][0]
+                let prazo = entradas[i][1].toDate().toDateString()
+                console.log(prazo)
+                p.innerText = entradas[i][0] +'  ---------------------------------------------------  ' + prazo
                 agenda.appendChild(p)
             }
         }
