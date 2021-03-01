@@ -44,9 +44,12 @@ function agendaUpdate() {
             for (let i = 0; i < entradas.length;i++) {
                 let p = document.createElement('p')
                 let prazo = entradas[i][1].toDate().toDateString()
+                let pData = document.createElement('p')
+                p.innerText = entradas[i][0]
                 console.log(prazo)
-                p.innerText = entradas[i][0] +'  ---------------------------------------------------  ' + prazo
+                pData.innerHTML = prazo +'<br><br>'
                 agenda.appendChild(p)
+                agenda.appendChild(pData)
             }
         }
     })
