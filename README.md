@@ -10,3 +10,17 @@ Hi, my name is Francisco Fleury and I'm currently a highshcool student. As I am 
 ----------------------------------------------------------------
 
 Added a register page and index.html already shows the agenda for logged users.
+
+
+0.1.1
+
+----------------------------------------------------------------
+
+Added the agenda with the task and it's deadline.
+
+
+0.1.2
+
+----------------------------------------------------------------
+
+Now you can add taks through the add.html page and input platform, subject and deadline.

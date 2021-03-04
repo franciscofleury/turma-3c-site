@@ -57,3 +57,7 @@ function agendaUpdate() {
         }
     })
 }
+
+function goAdd() {
+    window.location.assign('/add.html')
+}

@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agenda 3c</title>
-
-    <!-- update the version number as needed -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.9/firebase-auth.js"></script>
@@ -22,13 +20,19 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    
-  </head>
-  <body>
-    <h1 id='welcome'>Bem-vindo!</h1>
-      <div id="agenda"></div>
-      <button id='add' onclick="goAdd()" >Adicionar dever</button>
-    <script src="/index.js"></script>
-  </body>
+    <title>Adicionar</title>
+</head>
+<body>
+    <h1>Adicione um dever</h1>
+    <p>Nome do dever:</p>
+    <input id="nomeDever" type="text" placeholder="ex: Folha Alcanos">
+    <p>Plataforma: </p>
+    <input id="plataforma" type="text" placeholder="ex: Geekie">
+    <p>Matéria: </p>
+    <input id="materia" type="text" placeholder="ex: Química 2">
+    <p>Data de entrega : (em caso de ainda não haver data de entrega, deixe esse campo em branco)</p>
+    <input id="data" type="text" placeholder="ex: 17/03/2021"><br><br>
+    <button id='confirm' onclick="add()">OK</button>
+    <script src="add.js"></script>
+</body>
 </html>
